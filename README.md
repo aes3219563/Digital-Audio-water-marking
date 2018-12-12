@@ -10,7 +10,7 @@ It should be clear that all the voice records in the database are mono recorded,
 1. Voice data is read at 441000 Hz (we assume that all the voice records satisfy the [VCD standard](https://en.wikipedia.org/wiki/Video_CD)).<br>
 2. Voice data is cut into pieces with a time gap of 20 ms.<br>
 3. For each frame, calculate DWT first and then DCT.<br>
-3. In the DCT domain, find the max amplitude "a" (indicator) and second~fourth largest amplitudes "b~d" (encoder).
+3. In the DCT domain, find the max amplitude "a" (indicator) and second-fourth largest amplitudes "b-d" (encoder).
 4. Divide indicator a into a piece array via step length alpha=0.2 and find which piece is close to encoder b, we call this piece "p".<br>
 5. We encrypt the encoders by changing their sign based on the index of p and encoding information provided.
 6. Express the copyright information circularly in binary so that the frames and the binary copyright information are in a one-to-one correspondence.
